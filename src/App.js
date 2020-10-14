@@ -1,23 +1,38 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Login from './components/LoginComponent';
+import Register from './components/RegisterComponent';
 
 class App extends Component {
   render() {
+
+    
+    const LoginPage = () => {
+      return (
+        <Login />
+      );
+    };
+    const RegisterPage = () => {
+      return (
+        <Register />
+      );
+    };
+
     return (
-      <BrowserRouter>
+      <Router>
         <div className="App">
-          <Navbar dark color="primary">
-            <div className="container">
-              <NavbarBrand href="/">
-                Stagewood
-              </NavbarBrand>
-            </div>
-          </Navbar>
-          <Login />
+
+          <Switch>
+          <Route path='/login' component={LoginPage} />
+          <Route path='/register' component={RegisterPage} />
+          <Redirect to='/login' />
+        </Switch>
         </div>
-      </BrowserRouter>
+        
+        {/* App broswer router path for navigation */}
+
+
+      </Router>
     )
   }
 }
