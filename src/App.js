@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
+import { BrowserRouter } from 'react-router-dom';
+import Login from './components/LoginComponent';
 
 class App extends Component {
-  render () {
+  render() {
     return (
-      <div className="App">
-        <Navbar dark color="primary">
-        <div className="container">
+      <BrowserRouter>
+        <div className="App">
+          <Navbar dark color="primary">
+            <div className="container">
               <NavbarBrand href="/">
                 Stagewood
               </NavbarBrand>
+            </div>
+          </Navbar>
+          <Login />
         </div>
-        </Navbar>
-      </div>
+      </BrowserRouter>
     )
   }
 }
