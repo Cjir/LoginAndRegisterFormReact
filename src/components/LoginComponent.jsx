@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
+import { AUTH_TOKEN } from '../constants'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Login extends Component {
-    constructor(props) {
-        super(props);
-    }
-    
+    state = {
+        login: true, // switch between Login and SignUp
+        email: '',
+        password: '',
+        name: '',
+      }
+
     render() {
+
+        const { login, email, password, name } = this.state
+
         return (
             <div className="container">
                 <Form>
                     <FormGroup>
                         <Label for="userEmail">Email</Label>
-                        <Input type="email" name="email" id="userEmail" placeholder="userEmail" />
+                        <Input type="text" value={email} onChange={e => this.setState({ email: e.target.value })} id="userEmail" placeholder="your email address" />
                     </FormGroup>
                     <FormGroup>
                         <Label for="userPassword">Password</Label>
@@ -29,6 +36,15 @@ class Login extends Component {
             </div>
         )
     }
+
+    
+  _confirm = async () => {
+    // ... you'll implement this 🔜
+  }
+
+  _saveUserData = token => {
+    localStorage.setItem(AUTH_TOKEN, token)
+  }
 }
 
 export default Login;
