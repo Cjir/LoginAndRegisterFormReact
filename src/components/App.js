@@ -2,31 +2,26 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Login from './LoginComponent';
 import Register from './RegisterComponent';
+import Header from './Header';
 
 class App extends Component {
   render() {
-    
-    const LoginPage = () => {
-      return (
-        <Login />
-      );
-    };
-    const RegisterPage = () => {
-      return (
-        <Register />
-      );
-    };
 
     return (
-        <Router>
-          <div className="App">
-            <Switch>
-              <Route path='/login' component={LoginPage} />
-              <Route path='/register' component={RegisterPage} />
-              <Redirect to='/login' />
-            </Switch>
+      <Router>
+        <Header />
+        <div className="container">
+          <div className="row pt-3 mt-3">
+            <div className="col">
+              <Switch>
+                <Route path='/login' component={Login} />
+                <Route path='/register' component={Register} />
+                <Redirect to='/login' />
+              </Switch>
+            </div>
           </div>
-        </Router>
+        </div>
+      </Router>
     )
   }
 }
