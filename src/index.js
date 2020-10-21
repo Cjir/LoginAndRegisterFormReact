@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-import './styles/index.css';
+import './styles/style.scss';
+import './styles/index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { ApolloProvider } from 'react-apollo'

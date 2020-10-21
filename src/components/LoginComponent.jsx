@@ -54,38 +54,20 @@ class Login extends Component {
                                         type="text"
                                     />
                                 )}
-                                {/* Active For Email Login */}
+                                {/* Active Email For Login */}
                                 <Label>Your Email Address</Label>
                                 <Input
                                     value={email}
                                     onChange={e => this.setState({ email: e.target.value })}
                                     type="text"
                                 />
-                                {/* Confirm Password For Sign Up */}
-                                {/* {!login && (
-                            <Label>Confirm Email Address</Label>
-                        )}
-                        {!login && (
-                            <Input
-                                type="text"
-                            />
-                        )} */}
-                                {/* Active For Login */}
+                                {/* Active Password For Login */}
                                 <Label>Password</Label>
                                 <Input
                                     value={password}
                                     onChange={e => this.setState({ password: e.target.value })}
                                     type="password"
                                 />
-                                {/* Confirm Password For Sign Up */}
-                                {/* {!login && (
-                            <Label>Confirm Password</Label>
-                        )}
-                        {!login && (
-                            <Input
-                                type="text"
-                            />
-                        )} */}
                             </FormGroup>
                         </Form>
 
@@ -99,18 +81,20 @@ class Login extends Component {
                                     onCompleted={data => this._confirm(data)}
                                 >
                                     {mutation => (
-                                        <Button className="mr-2" onClick={mutation}>
+                                        <Button outline className="m-2" size="small" onClick={mutation}>
                                             {login ? 'login' : 'signup'}
                                         </Button>
                                     )}
                                 </Mutation>
                                 <Button
-                                    className="ml-2"
+                                    outline
+                                    className="m-2"
+                                    size="small"
                                     onClick={() => this.setState({ login: !login })}
                                 >
                                     {login
-                                        ? 'need to create an account?'
-                                        : 'already have an account?'}
+                                        ? 'need an account?'
+                                        : 'already a user?'}
                                 </Button>
                             </FormGroup>
                         </Form>

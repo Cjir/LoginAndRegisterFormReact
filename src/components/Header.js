@@ -16,22 +16,27 @@ const Header = (props) => {
     <div>
       <Navbar color="dark" dark>
         <NavbarBrand href="/" className="mr-auto">STAGEWOOD</NavbarBrand>
-          
-          {/* Login Logout button */}
-          {authToken ? (
-            <Button><Link
-              onClick={() => {
-                localStorage.removeItem(AUTH_TOKEN)
-                this.props.history.push(`/`)
-              }}
-            >
-              logout
-            </Link></Button>
-          ) : (
-              <Button><Link to="/login" className="mr-1 no-underline black">
-                login
-              </Link></Button>
-            )}
+
+        {/* Login Logout button */}
+        {authToken ? (
+          <Button outline color="light" className="mr-3">
+            <Link
+            className="mr-1 navButton"
+            onClick={() => {
+              localStorage.removeItem(AUTH_TOKEN)
+              this.props.history.push(`/`)
+            }}
+          >
+            logout
+            </Link>
+          </Button>
+        ) : (
+            <Button outline color="light" className="mr-3">
+              <Link to="/login" className="mr-1 black navButton">
+              login
+              </Link>
+              </Button>
+          )}
 
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
 
@@ -39,10 +44,7 @@ const Header = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="https://github.com/Cjir/LoginAndRegisterFormReact" target="_blank">GitHub</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

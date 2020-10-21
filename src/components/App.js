@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Login from './LoginComponent';
-import Register from './RegisterComponent';
 import Header from './Header';
 
 class App extends Component {
@@ -15,7 +14,6 @@ class App extends Component {
             <div className="col">
               <Switch>
                 <Route path='/login' component={Login} />
-                <Route path='/register' component={Register} />
                 <Redirect to='/login' />
               </Switch>
             </div>
