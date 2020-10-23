@@ -1,4 +1,4 @@
-# Welcome to my READ ME
+# Login Authentication
 
 Build a simple Login/Register System using React or React Native
 
