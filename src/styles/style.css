@@ -1,0 +1,45 @@
+div .col-8 {
+    background: rgba(255, 255, 255, 0.8);
+    height: 100vh;
+    color: gray;
+}
+div #background {
+    background-image: url("../img/hill.png");
+}
+#login-container {
+    margin-top: 8rem;
+    width: 50rem;
+    padding-bottom: 8rem;
+}
+#login-container .btn {
+    background-color: rgb(255, 203, 71);
+    border-color: transparent;
+}
+div .h2 {
+    font-size: 50px;
+}
+div .input-text {
+    font-size: 1em;
+    color: grey;
+    border: 0;
+    border-radius: unset;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid grey;
+}
+div .label-style {
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: 600;
+}
+#login-container #forgot-password {
+    background-color: transparent;
+    color: rgb(255, 203, 71);
+    display: inline;
+    padding: 0;
+    margin-left: 4.8em;
+}
+
+div h5 {
+    font-size: 0.8rem;
+}

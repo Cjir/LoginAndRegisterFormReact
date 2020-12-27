@@ -1,68 +1,109 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to my READ ME
 
-## Available Scripts
+Build a simple Login/Register System using React or React Native
 
-In the project directory, you can run:
+## Objective
+> - Demonstrate the full-stack development process of a simple web application.
+> - Demonstrate the use of tools and techniques you are familiar with (e.g. JavaScript,  React, Node, DB).
+> - Demonstrate the ability to quickly grasp new concepts and find your way around in  applying them (such as the use of GraphQL, Prisma, etc.). 
 
-### `yarn start`
+## Installation
+Link to [repository](https://github.com/Cjir/LoginAndRegisterFormReact)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open Link to repository
+```
+1.Go to Master Branch
+```
+```
+2. Clone Repository
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Open Login and Register System Folder
+```
+1.  cd login-register
+        or
+    open login-register folder
+```
+```
+2.  npm install
+        or
+    yarn install
+```
+```
+3.  cd ..
+        or
+    return to main folder from login-register
+```
+Initializating Server
+```
+4.  From Main Folder
+      
+    cd curl https://codeload.github.com/howtographql/react-apollo/tar.gz/starter | tar -xz --strip=1 react-apollo-starter/server
 
-### `yarn test`
+    Select
+        demo server
+        region US
+```
+Open 2 Seperate Terminals
+```
+5.  Terminal 1  
+        cd server
+        yarn start
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Terminal 2
+        cd login-register
+        yarn start
+```   
+Open Prisma server
+```
+    Under server folder
+        1. Open Prisma Folder
+        2. Open Prisma.yml on editor
+        3. Open Link to Endpoint
+```
+Create A New User On Sign In
+```
+   # Use Query
 
-### `yarn build`
+    {
+	    users {
+	    name
+        email
+        password
+        }
+    }
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+## Tools
+- React
+- ReactStrap
+- Reactout Router
+- GraphQL
+- Apollo
+- Prisma
+- Node
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Usage example
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Web Application Login.
 
-### `yarn eject`
+## Resources
+1. [Core GraphQL Concepts](https://www.howtographql.com/basics/2-core-concepts/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. [React + Apollo](https://www.howtographql.com/react-apollo/0-introduction/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Roadmap
+1. Create a Single Page Login App
+2. Allow Input Date From
+    - New User Sign Up 
+    - Current User Login\
+    \
+_In-Progress_
+3. User Authentication
+4. Allow for User to Post New Data on to a Blog POst
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Developer
+Christopher John Roman
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Project status
+> - Ongoing

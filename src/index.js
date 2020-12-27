@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import 'typeface-montserrat';
+import 'typeface-playfair-display';
+
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-
-import './styles/style.scss';
-import './styles/index.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'

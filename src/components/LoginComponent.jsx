@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import { Container, Row, Col } from 'react-bootstrap';
-import { AUTH_TOKEN } from '../constants'
+import { Button, Form, FormGroup, Label, Input, NavLink } from 'reactstrap';
+import { Container, Row, Col,} from 'react-bootstrap';
+import { AUTH_TOKEN } from '../constants';
 
-import { Mutation } from 'react-apollo'
-import gql from 'graphql-tag'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { Mutation } from 'react-apollo';
+import gql from 'graphql-tag';
 
 // Mutation Type
 const SIGNUP_MUTATION = gql`
@@ -36,43 +38,58 @@ class Login extends Component {
         // Display Component
         const { login, email, password, name } = this.state
         return (
-            <Container className="mt-3">
+            <Container id="login-container">
                 <Row>
                     <Col sm={6} className="mx-auto">
-                        <h2 className="text-center">{login ? 'Login' : 'Sign Up'}</h2>
+                        <h1 className="text-center">
+                            Let's Go!
+                        </h1>
+                        {/* <h3 className="text-center mt-3">{login ? 'Login' : 'Sign Up'}</h3> */}
                         {/* Login Form */}
                         <Form>
                             <FormGroup>
                                 {/* Name For Sign Up*/}
                                 {!login && (
-                                    <Label>Your Name</Label>
+                                    <Label className="label-style">Your Name</Label>
                                 )}
                                 {!login && (
                                     <Input
+                                        className="input-text"
                                         value={name}
                                         onChange={e => this.setState({ name: e.target.value })}
                                         type="text"
                                     />
                                 )}
                                 {/* Active Email For Login */}
-                                <Label>Your Email Address</Label>
+                                <Label className="label-style">Your Email Address</Label>
                                 <Input
+                                    className="input-text"
                                     value={email}
                                     onChange={e => this.setState({ email: e.target.value })}
                                     type="text"
                                 />
                                 {/* Active Password For Login */}
-                                <Label>Password</Label>
+                                <Label className="label-style">Password</Label>
                                 <Input
+                                    className="input-text"
                                     value={password}
                                     onChange={e => this.setState({ password: e.target.value })}
                                     type="password"
                                 />
                             </FormGroup>
                         </Form>
-
-
+                        
                         <Form>
+                            <FormGroup check>
+                                <Label check>
+                                    <Input type="checkbox" />{' '}
+                                Stay Signed In
+                                </Label>
+                                <NavLink id="forgot-password"> <FontAwesomeIcon className="mr-2" icon="key" />forgot password </NavLink>
+                            </FormGroup>
+                        </Form>
+
+                        <Form className="mt-3">
                             <FormGroup className="text-center">
                                 {/* Button Switch Login to Sign Up */}
                                 <Mutation
@@ -81,13 +98,12 @@ class Login extends Component {
                                     onCompleted={data => this._confirm(data)}
                                 >
                                     {mutation => (
-                                        <Button outline className="m-2" size="small" onClick={mutation}>
+                                        <Button className="m-2" size="small" onClick={mutation}>
                                             {login ? 'login' : 'signup'}
                                         </Button>
                                     )}
                                 </Mutation>
                                 <Button
-                                    outline
                                     className="m-2"
                                     size="small"
                                     onClick={() => this.setState({ login: !login })}
